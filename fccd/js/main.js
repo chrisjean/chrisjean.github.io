@@ -28,7 +28,7 @@ function setAnnualPrice() {
 
         var outputValue = parseFloat(value.substring(1)) - parseFloat(80);
 
-        prices[i].textContent = '$' + outputValue + '<span class="price-small">.00</span>';
+        prices[i].textContent = '$' + outputValue;
 
     }
 }
@@ -41,7 +41,7 @@ function setMonthlyPrice() {
 
         var outputValue = parseFloat(value.substring(1)) + parseFloat(80);
 
-        prices[i].textContent = '$' + outputValue + '<span class="price-small">.00</span>';
+        prices[i].textContent = '$' + outputValue;
 
     }
 
