@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Credit Card Form</title>
 
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>
+    <link rel="stylesheet" href="./style/reset.css"/>
     <link rel="stylesheet" href="./style/main.css" />
 </head>
 <body>
@@ -18,14 +18,14 @@
             <div class="card-item__focus" v-bind:class="{'-active' : focusElementStyle }" v-bind:style="focusElementStyle" ref="focusElement"></div>
             <div class="card-item__cover">
               <img
-              v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + currentCardBackground + '.jpeg'" class="card-item__bg">
+              v-bind:src="'.\images' + currentCardBackground + '.jpeg'" class="card-item__bg">
             </div>
             <div class="card-item__wrapper">
               <div class="card-item__top">
-                <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/chip.png" class="card-item__chip">
+                <img src="./images/chip.png" class="card-item__chip">
                 <div class="card-item__type">
                   <transition name="slide-fade-up">
-                    <img v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + getCardType + '.png'" v-if="getCardType" v-bind:key="getCardType" alt="" class="card-item__typeImg">
+                    <img v-bind:src="'./images/' + getCardType + '.png'" v-if="getCardType" v-bind:key="getCardType" alt="" class="card-item__typeImg">
                   </transition>
                 </div>
               </div>
@@ -90,14 +90,14 @@
           <div class="card-item__side -back">
             <div class="card-item__cover">
               <img
-              v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + currentCardBackground + '.jpeg'" class="card-item__bg">
+              v-bind:src="'./images/' + currentCardBackground + '.jpeg'" class="card-item__bg">
             </div>
             <div class="card-item__band"></div>
             <div class="card-item__cvv">
                 <div class="card-item__cvvTitle">CVV</div>
                 <div class="card-item__cvvBand">{{cardCvv}}</div>
                 <div class="card-item__type">
-                    <img v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + getCardType + '.png'" v-if="getCardType" class="card-item__typeImg">
+                    <img v-bind:src="'./images/' + getCardType + '.png'" v-if="getCardType" class="card-item__typeImg">
                 </div>
             </div>
           </div>
@@ -143,9 +143,7 @@
         </button>
       </div>
     </div>
-    <a href="https://github.com/muhammederdem/credit-card-form?c" target="_blank" class="github-btn">
-      See on GitHub
-    </a>
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js"></script>
