@@ -11,9 +11,13 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+  <script defer src="/fontawesome-free-5.11.2-web/js/all.js"></script> <!--load all styles -->
+  
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -22,16 +26,18 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <div id="page-container">
+      <div class="overlay animate-opacity" onclick="toggleSlider()" style="cursor:pointer" id="pageOverlay"></div>
+        
     <div class="content">
       <div class="navbar"><img src="img/FoodConnex_Logo_2019.jpg" alt="FoodConnex" class="logo" ><div class="contactInfo">Toll Free:<a class="phone" href="tel:(833)366-3266">(833) 366-3266</a> | <a href="/contact-us" class="contactUs" >Contact Us</a></div></div>
       <div class="message">Choose a plan that is right for your business</div>
       <div class="monthlySwitch">
-        <span class="monthlyBilling enabled">Monthly Billing</span>
-        <label class="switch">
+        <a id="monthlyBilling" class="enabled" href="javascript:setMonthlyPrice();" >Monthly Billing</a>
+        <!--<label class="switch">
             <input id="billingType" type="checkbox">
             <span class="slider round"></span>
-         </label>
-         <span class="annualBilling disabled">Annual Billing</span>
+         </label>-->
+         <a id="annualBilling" class="disabled"  href="javascript:setAnnualPrice();" >Annual Billing - save 10%</a>
       </div>
       <div class="comparison">
 
@@ -45,7 +51,8 @@
             </th>
           </tr> -->
           <tr>
-            <th class="tl"></th>
+            <th class="tl optionHeader"></th>
+            <th class="footerSlideHeader"></th>
             <th class="compare-heading">
               Unlimited Essentials
             </th>
@@ -63,7 +70,8 @@
             </th>
           </tr>
           <tr>
-            <th></th>
+            <th class="optionHeader"></th>
+            <th class="footerSlideColumn"></th>
             <th class="price-info">
               <!--<div class="price-was">Was £6.00</div>-->
               <div class="price-now"><span class="price">$575</span> /month</div>
@@ -98,11 +106,12 @@
         </thead>
         <tbody>
           <tr>
-            <td></td>
+            <td class="optionNameColumn"></td>
             <td colspan="5">Purchase & Sales Order Processing</td>
           </tr>
           <tr class="compare-row">
-            <td class="optionName">Purchase & Sales Order Processing</td>
+            <td class="optionName">Purchase & Sales Order Processing </td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('POProcessing')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -116,6 +125,7 @@
           </tr>
           <tr>
             <td class="optionName">Forms and Label Printing</td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('FormsAndLabelPrinting')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -128,6 +138,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Inventory Control & Reporting</td>
+            <td class="footerSlideIcon"><a href="javascript:drawerSlide('InventoryControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -140,6 +151,7 @@
           </tr>
           <tr>
             <td class="optionName">Quickbooks Integration</td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('Quickbooks')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -152,6 +164,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Sales Analysis Tools & Reports</td>
+            <td class="footerSlideColumn"></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -164,6 +177,7 @@
           </tr>
           <tr>
             <td class="optionName">Customer Relationship Management</td>
+            <td class="footerSlideColumn"></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -176,6 +190,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Integrated Packing Stations</td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileFillAndShip')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -188,6 +203,7 @@
           </tr>
           <tr>
             <td class="optionName">Mobile Order Entry</td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileOrderEntry')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -201,6 +217,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Barcode Shipping & Receiving</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td><span class="tickgreen">✔</span></td>
             <td><span class="tickgreen">✔</span></td>
@@ -213,6 +230,7 @@
           </tr>
           <tr>
             <td class="optionName">Production & Manufacturing</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td></td>
             <td><span class="tickgreen">✔</span></td>
@@ -226,6 +244,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Value Add Bill of Materials</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td></td>
             <td><span class="tickgreen">✔</span></td>
@@ -239,6 +258,7 @@
           </tr>
           <tr>
             <td class="optionName">Enterprise Level Logistics</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -251,6 +271,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Lot Control & Traceability</td>
+            <td class="footerSlideColumn"><a href="javascript:drawerSlide('LotControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -263,6 +284,7 @@
           </tr>
           <tr>
             <td class="optionName">Warehouse Slot Location Traceability</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -275,6 +297,7 @@
           </tr>
           <tr class="compare-row">
             <td class="optionName">Mobile Wireless Warehouse Lot Tracking</td>
+            <td class="footerSlideColumn"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -287,20 +310,119 @@
       </div>
       
     </div>
+    
     <div class="footer"></div>
 </div>
+<div id="footerSlideContainer">
+
+  <!-- Section for the POProcessing Option -->
+  <div id="POProcessing" class="hide">
+    <div class="footerSlideText">
+      <h3>Sales and Purchase Order Management</h3>
+      <p>Food Connex’s system lets you easily manage orders. The simple customizable screen displays historical order information, current inventory availability, and pricing information. Intuitive prompts help you quickly create orders and identify recommended items to increase sales and encourage retention.</p>
+      <a href="https://www.foodconnex.com/sales-and-purchase-order-management" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End POProcessing Option-->
+
+<!-- Section for the FormsAndLabelPrinting Option -->
+<div id="FormsAndLabelPrinting" class="hide">
+    <div class="footerSlideText">
+      <h3>Forms and Label Printing</h3>
+      <p>Food Connex’s system lets you easily create forms and labels for all products</p>
+      <!--<a href="https://www.foodconnex.com/sales-and-purchase-order-management" class="sliderButton">Read More</a>-->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End FormsAndLabelPrinting Option-->
+
+
+ 
+<!-- Section for the InventoryControl Option -->
+<div id="InventoryControl" class="hide">
+    <div class="footerSlideText">
+      <h3>Inventory Control & Reporting</h3>
+      <p>Food Connex displays information about available, allocated, and on order product for your staff. With Food Connex, when a customer asks if you stock a specific item, you have immediate access to that information so you no longer have to turn away a sale, or worse fail to deliver on a commitment. Each sales, purchase, and production process automatically updates the inventory information in real-time providing transparency for the entire warehouse.</p>
+      <a href="https://www.foodconnex.com/inventory-control" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/Inventory_control.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End InventoryControl Option-->
+
+<!-- Section for the Quickbooks Option -->
+<div id="Quickbooks" class="hide">
+    <div class="footerSlideText">
+      <h3>Accounting and QuickBooks Integration</h3>
+      <p>Food Connex integrates its order entry and inventory management system with QuickBooks general ledger, accounts receivables and payables. By utilizing an integrated solution for all your business management needs Food Connex eliminates the hassles of multiple stand-alone systems.</p>
+      <a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/QuickBooks.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End Quickbooks Option-->
+
+ <!-- Section for the LotControl Option -->
+<div id="LotControl" class="hide">
+    <div class="footerSlideText">
+      <h3>Traceability and Recall Reporting</h3>
+      <p>Protect your brand with automated traceability, instant recall reporting and lot tracking. Food Connex provides tools that enable you meet and exceed government and private safety and quality control guidelines while reducing the labor burden of recordkeeping.</p>
+      <!--<a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a> -->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End LotControl Option-->
+
+  <!-- Section for the MobileOrderEntry Option -->
+<div id="MobileOrderEntry" class="hide">
+    <div class="footerSlideText">
+      <h3>Mobile Order Entry</h3>
+      <p>Food Connex Mobile Order Entry allows access to your sales people and customers to place their own orders using a mobile site on a phone or tablet.</p>
+      <!--<a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a> -->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/MobileOrderEntry_iPad.png" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End MobileOrderEntry Option-->
+
+  <!-- Section for the MobileFillAndShip Option -->
+  <div id="MobileFillAndShip" class="hide">
+      <div class="footerSlideText">
+        <h3>Packing Stations and Mobile Fill-n-Ship</h3>
+        <p>Packing stations enable users to quickly and accurately receive, process, and ship product. Barcode labeling and scanning eliminates errors by confirming product identification and automatically capturing weights for variable-weight products. Traceable serial numbers and production dates are also retained for quality control and recall reporting.</p>
+        <a href="https://www.foodconnex.com/packing-stations-and-mobile-fill-and-ship" class="sliderButton">Read More</a>
+      </div>
+      <div class="footerSlideImage">
+        <img src="img/Mobile_fillandship.jpg" class="sliderImage">
+        <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+      </div>
+    </div>
+   <!-- End MobileFillAndShip Option-->
+
+</div>
+
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>

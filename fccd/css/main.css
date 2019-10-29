@@ -94,9 +94,11 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+
+/* ========================================================================== */
+body {
+  font-family: 'Roboto';font-size: 22px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -265,8 +267,8 @@ textarea {
 }
 
 #page-container {
-  position: relative;
-  min-height: 100vh;
+  
+  
 }
 
 .content{
@@ -296,6 +298,7 @@ textarea {
 .contactInfo {
   align-self: center;
   padding-right: 50px;
+  font-size: .7em;
 }
 
 .contactUs {
@@ -324,12 +327,13 @@ textarea {
 }
 
 /* Monthly Switch Styles */
+
 .monthlySwitch {
   padding: 20px;
   text-align: center;
 
 }
-
+/*
 .monthlySwitch .enabled {
 
   color: #336699;
@@ -346,7 +350,7 @@ textarea {
   padding-right: 20px;
   font-size: 1.4rem;
 
-}
+} */
 /*
 .monthlyBilling {
   color: #336699;
@@ -359,7 +363,7 @@ textarea {
   padding-left: 20px;
   font-size: 1.2rem;
 } */
-
+/*
 .monthlySwitch .switch {
   position: relative;
   display: inline-block;
@@ -410,15 +414,17 @@ textarea {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+*/
 
 /* Rounded sliders */
+/*
 .monthlySwitch .slider.round {
   border-radius: 34px;
 }
 
 .monthlySwitch .slider.round:before {
   border-radius: 50%;
-}
+} */
 
 
 /* Comparison Table Styles */
@@ -442,10 +448,32 @@ textarea {
   border-right:1px solid #CCC;
   empty-cells: show;
   padding:10px;
+
+}
+
+.optionHeader {
+  border-right: none !important;
+  
 }
 
 .optionName {
   border-left:1px solid #CCC;
+  border-right:none !important;
+}
+
+.footerSlideHeader {
+  border-right:1px solid #CCC;
+  border-left:none;
+  border-bottom: none !important;
+  width: 35px;
+  border-right:1px solid #CCC;
+}
+.footerSlideColumn {
+  width: 35px;
+  border-right:1px solid #CCC;
+  border-left:none !important;
+  margin: 5px;
+  
 }
 .compare-heading {
   font-size:18px;
@@ -605,9 +633,269 @@ textarea {
 }
 }
 
+.footerSlideButton {
+  color:#336699;
+ 
+}
+
 .footer {
   position: fixed;
   height:  2.5rem;  
   width: 100%;
   bottom: 0;
+}
+
+#monthlyBilling.enabled{
+  background:#336699;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  
+  margin:5px 0 10px 0;
+  width: 220px;
+}
+
+
+#monthlyBilling.disabled {
+  background:#b9b8b8;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  text-decoration: line-through;
+  margin:5px 0 10px 0;
+  width: 220px;
+}
+
+
+#annualBilling.enabled{
+  background:#336699;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  
+  margin:5px 0 10px 0;
+  width: 220px;
+}
+
+
+#annualBilling.disabled {
+  background:#b9b8b8;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  text-decoration: line-through;
+  margin:5px 0 10px 0;
+  width: 220px;
+}
+
+
+/* Footer Slide Compontent */
+#footerSlideContainer {
+	position: fixed;
+	bottom:0;
+  width: 100%;
+  height:0px;
+  overflow: auto;
+  z-index: 1000;
+  overflow-x: hidden;
+  /*transition: 0.3s all;*/
+  left:0;
+}
+
+.slideup, .slidedown {
+  max-height: 0;            
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.8s ease-in-out;
+  -moz-transition: max-height 0.8s ease-in-out;
+  -o-transition: max-height 0.8s ease-in-out;
+  transition: max-height 0.8s ease-in-out;
+}
+
+#POProcessing {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#FormsAndLabelPrinting {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#InventoryControl {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+
+}
+
+#Quickbooks {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#LotControl {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#MobileOrderEntry {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#MobileFillAndShip {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+.hide {
+  display: none !important;
+}
+
+.footerSlideText {
+  float: left;
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2.2vh;
+}
+
+.footerCloseButton {
+
+  position: absolute;
+  color: black;
+  top: 16px;
+  right: 16px;
+  font-size: 1.3em;
+}
+
+.footerSlideImage {
+  float: left;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+
+}
+.sliderImage {
+
+  padding: 20px;
+  width: 19vw;
+  margin:10px;
+  object-fit: scale-down;
+  
+}
+
+.sliderButton {
+
+  background:#336699;
+  padding:10px 20px;
+  font-size:12px;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:3px;
+  text-transform:uppercase;
+  margin:10px;
+  width: 150px;
+  align-self: center;
+}
+
+
+#pageOverlay {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,.5);
+  overflow: hidden;
 }
