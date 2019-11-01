@@ -30,288 +30,314 @@
         
     <div class="content">
       <div class="navbar"><img src="img/FoodConnex_Logo_2019.jpg" alt="FoodConnex" class="logo" ><div class="contactInfo">Toll Free:<a class="phone" href="tel:(833)366-3266">(833) 366-3266</a> | <a href="/contact-us" class="contactUs" >Contact Us</a></div></div>
-      <div class="message">Choose a plan that is right for your business</div>
-      <div class="monthlySwitch">
-        <a id="monthlyBilling" class="enabled" href="javascript:setMonthlyPrice();" >Monthly Billing</a>
-        <!--<label class="switch">
-            <input id="billingType" type="checkbox">
-            <span class="slider round"></span>
-         </label>-->
-         <a id="annualBilling" class="disabled"  href="javascript:setAnnualPrice();" >Annual Billing - save 10%</a>
-      </div>
-      <div class="comparison">
+      <div class="backgroundGallery"><img id="backgroundGallery_img" alt="/img/showcase-image.jpg" src="/img/showcase-image.jpg"></div>
+      <div class="pricingPlan">
+        <div class="messageHeader">
+          <div class="message"><span class="messageText">Choose the plan that is right for your business</span></div>
+          <div class="monthlySwitch">
+            <a id="monthlyBilling" class="enabled" href="javascript:setMonthlyPrice();" >Monthly Billing</a>
+            <!--<label class="switch">
+                <input id="billingType" type="checkbox">
+                <span class="slider round"></span>
+            </label>-->
+            <a id="annualBilling" class="disabled"  href="javascript:setAnnualPrice();" >Annual Billing - save $1000</a>
+          </div>
+        </div>
+        <div class="comparisonContainer">
+          <div class="comparison">
 
-      <table>
-        <thead>
-          <!--<tr>
-            <th class="tl tl2"></th>
-            
-            <th colspan="5" class="qbo">
-              Food Connex ERP Software for the Food Industry
-            </th>
-          </tr> -->
-          <tr>
-            <th class="tl optionHeader"></th>
-            <th class="footerSlideHeader"></th>
-            <th class="compare-heading">
-              Unlimited Essentials
-            </th>
-            <th class="compare-heading">
-              Pick & Pack
-            </th>
-            <th class="compare-heading">
-              Production Processing
-            </th>
-            <th class="compare-heading">
-              Enterprise Level Logistics
-            </th>
-            <th class="compare-heading">
-              Warehouse Management
-            </th>
-          </tr>
-          <tr>
-            <th class="optionHeader"></th>
-            <th class="footerSlideColumn"></th>
-            <th class="price-info">
-              <!--<div class="price-was">Was £6.00</div>-->
-              <div class="price-now"><span class="price">$575</span> /month</div>
-              <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
-              <!--<div class="price-try"><span class="hide-mobile">or </span><a href="#">try <span class="hide-mobile">it free</span></a></div>-->
-            </th>
-            <th class="price-info">
-              <!--<div class="price-was">Was £7.00</div>-->
-              <div class="price-now"><span class="price">$775</span> /month</div>
-              <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
-              <!--<div class="price-try"><span class="hide-mobile">or </span><a href="#">try <span class="hide-mobile">it free</span></a></div>-->
-            </th>
-            <th class="price-info">
-             <!-- <div class="price-was">Was £15.00</div>-->
-              <div class="price-now"><span class="price">$875</span> /month</div>
-              <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
-             <!-- <div class="price-try"><span class="hide-mobile">or </span><a href="#">try <span class="hide-mobile">it free</span></a></div>-->
-            </th>
-            <th class="price-info">
-              <!--<div class="price-was">Was £25.00</div>-->
-              <div class="price-now"><span class="price">$975</span> /month</div>
-              <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
-             <!-- <div class="price-try"><span class="hide-mobile">or </span><a href="#">try <span class="hide-mobile">it free</span></a></div>-->
-            </th>
-            <th class="price-info">
-              <!--<div class="price-was">Was £25.00</div>-->
-              <div class="price-call"><span>Call for Pricing</span></div>
-              <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
-             <!-- <div class="price-try"><span class="hide-mobile">or </span><a href="#">try <span class="hide-mobile">it free</span></a></div>-->
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="optionNameColumn"></td>
-            <td colspan="5">Purchase & Sales Order Processing</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Purchase & Sales Order Processing </td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('POProcessing')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Forms and Label Printing</td>
-          </tr>
-          <tr>
-            <td class="optionName">Forms and Label Printing</td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('FormsAndLabelPrinting')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Inventory Control & Reporting</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Inventory Control & Reporting</td>
-            <td class="footerSlideIcon"><a href="javascript:drawerSlide('InventoryControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Quickbooks Integration</td>
-          </tr>
-          <tr>
-            <td class="optionName">Quickbooks Integration</td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('Quickbooks')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Sales Analysis Tools & Reports</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Sales Analysis Tools & Reports</td>
-            <td class="footerSlideColumn"></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Customer Relationship Management</td>
-          </tr>
-          <tr>
-            <td class="optionName">Customer Relationship Management</td>
-            <td class="footerSlideColumn"></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Integrated Packing Stations</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Integrated Packing Stations</td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileFillAndShip')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Mobile Order Entry</td>
-          </tr>
-          <tr>
-            <td class="optionName">Mobile Order Entry</td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileOrderEntry')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Barcode Shipping & Receiving</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Barcode Shipping & Receiving</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Production & Manufacturing</td>
-          </tr>
-          <tr>
-            <td class="optionName">Production & Manufacturing</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Value Add Bill of Materials</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Value Add Bill of Materials</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-            
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Enterprise Level Logistics</td>
-          </tr>
-          <tr>
-            <td class="optionName">Enterprise Level Logistics</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Lot Control & Traceability</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Lot Control & Traceability</td>
-            <td class="footerSlideColumn"><a href="javascript:drawerSlide('LotControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="5">Warehouse Slot Location Traceability</td>
-          </tr>
-          <tr>
-            <td class="optionName">Warehouse Slot Location Traceability</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-          <tr >
-            <td>&nbsp;</td>
-            <td colspan="5">Mobile Wireless Warehouse Lot Tracking</td>
-          </tr>
-          <tr class="compare-row">
-            <td class="optionName">Mobile Wireless Warehouse Lot Tracking</td>
-            <td class="footerSlideColumn"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><span class="tickgreen">✔</span></td>
-          </tr>
-        </tbody>
-      </table>
-      
+            <table>
+              <thead>
+                <!--<tr>
+                  <th class="tl tl2"></th>
+                  
+                  <th colspan="5" class="qbo">
+                    Food Connex ERP Software for the Food Industry
+                  </th>
+                </tr> -->
+                <tr>
+                  <th class="tl optionHeader"></th>
+                  <th class="footerSlideHeader"></th>
+                  <th class="compare-heading">
+                    Unlimited Essentials
+                  </th>
+                  <th class="compare-heading">
+                    Pick & Pack
+                  </th>
+                  <th class="compare-heading">
+                    Production Processing
+                  </th>
+                  <th class="compare-heading">
+                    Enterprise Level Logistics
+                  </th>
+                  <th class="compare-heading">
+                    Warehouse Management
+                  </th>
+                </tr>
+                <tr>
+                  <th class="optionHeader"><div class="perday"> <div class="smallText">Less than</div><br><div class="largeText"> $1.75</div><br><div class="smallText"> Per User Per Day</div></div></th>
+                  <th class="footerSlideColumn"></th>
+                  <th class="price-info">
+                    
+                    <div class="price-now"><span class="price">$575</span> /month</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>up to 10 users</span></div>
+                    
+                  </th>
+                  <th class="price-info">
+                    
+                    <div class="price-now"><span class="price">$775</span> /month</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>up to 25 users</span></div>
+                    
+                  </th>
+                  <th class="price-info">
+                  
+                    <div class="price-now"><span class="price">$875</span> /month</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>up to 40 users</span></div>
+                  
+                  </th>
+                  <th class="price-info">
+                    
+                    <div class="price-now"><span class="price">$975</span> /month</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>unlimited users</span></div>
+                  
+                  </th>
+                  <th class="price-info">
+                    
+                    <div class="price-call"><span>Call for Pricing</span></div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>unlimited users</span></div>
+                  
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="optionNameColumn"></td>
+                  <td colspan="5">Purchase & Sales Order Processing</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Purchase & Sales Order Processing </td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('POProcessing')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Forms and Label Printing</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Forms and Label Printing</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('FormsAndLabelPrinting')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Inventory Control & Reporting</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Inventory Control & Reporting</td>
+                  <td class="footerSlideIcon"><a href="javascript:drawerSlide('InventoryControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Quickbooks Integration</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Quickbooks Integration</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('Quickbooks')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Sales Analysis Tools & Reports</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Sales Analysis Tools & Reports</td>
+                  <td class="footerSlideColumn"></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Customer Relationship Management</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Customer Relationship Management</td>
+                  <td class="footerSlideColumn"></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Integrated Packing Stations</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Integrated Packing Stations</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileFillAndShip')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Mobile Order Entry</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Mobile Order Entry</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileOrderEntry')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Barcode Shipping & Receiving</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Barcode Shipping & Receiving</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Production & Manufacturing</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Production & Manufacturing</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Value Add Bill of Materials</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Value Add Bill of Materials</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Enterprise Level Logistics</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Enterprise Level Logistics</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Lot Control & Traceability</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Lot Control & Traceability</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('LotControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Warehouse Slot Location Traceability</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Warehouse Slot Location Traceability</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr >
+                  <td>&nbsp;</td>
+                  <td colspan="5">Mobile Wireless Warehouse Lot Tracking</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Mobile Wireless Warehouse Lot Tracking</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>
+        </div>
       </div>
-      
     </div>
     
-    <div class="footer"></div>
+    <div id="footer">
+
+      <div id="copyright">
+          <p class="copyrightbottom">Copyright
+          <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script>
+          IMS Software, LLC. All Rights Reserved.</p>
+      </div>
+      <div id="copyrightLink">
+          <p>IMS Software, LLC, and its flagship solution Food Connex, are owned by CAI Software, LLC,<br>A leader in on-demand enterprise management systems. Visit <a href="http://www.caisoft.com" target="_blank" rel="noopener">caisoft.com</a> to learn more.</p>
+      </div>       
+    
+       
+      
+    </div>
 </div>
 <div id="footerSlideContainer">
 
