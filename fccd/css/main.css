@@ -513,12 +513,14 @@ body {
 }
 
 .smallText {
-  font-size: .70rem;
+  font-size: .70em;
+  line-height: 1;
 }
 
 
 .largeText {
-  font-size: 2rem;
+  font-size: 2em;
+  line-height: 1;
 }
 
 .numberUsers {
