@@ -1,0 +1,458 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+  <script defer src="/fontawesome-free-5.11.2-web/js/all.js"></script> <!--load all styles -->
+  
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div id="page-container">
+      <div class="overlay animate-opacity" onclick="toggleSlider()" style="cursor:pointer" id="pageOverlay"></div>
+        
+    <div class="content">
+      <div class="navbar"><img src="img/DataView_Logo_White_2019.png" alt="FoodConnex" class="logo" ><div class="contactInfo">Phone:<a class="phone" href="tel:(603)893-9090">(603) 893-9090</a> | <a href="/contact-us" class="contactUs" >Contact Us</a></div></div>
+      <div class="backgroundGallery">
+        <div id="rotating-item-wrapper"><img class="rotating-item" src="img/showcase-image-1.jpg" alt="Fiber Optics"  />
+          <img class="rotating-item" src="img/showcase-image-2.jpg" alt="Laptop Closing"  />
+          <img class="rotating-item" src="img/showcase-image-3.jpg" alt="Users working at a desk"  />
+          <img class="rotating-item" src="img/showcase-image-4.jpg" alt="Window with a workstation"  />
+          <img class="rotating-item" src="img/showcase-image-5.jpg" alt="Server"  />
+          <img class="rotating-item" src="img/showcase-image-6.jpg" alt="Building"  />
+          
+        </div>
+      </div>
+          <!--  <img id="backgroundGallery_img" alt="img/showcase-image3.jpg" src="img/showcase-image3.jpg"></div>-->
+      <div class="pricingPlan">
+        <div class="messageHeader">
+          <div class="message"><span class="messageText">Choose the plan that is right for your business<br>Always scalable, we work with you to solve your business needs</span></div>
+          <div class="monthlySwitch">
+            <a id="monthlyBilling" class="enabled" href="javascript:setMonthlyPrice();" >Monthly Billing</a>
+            <!--<label class="switch">
+                <input id="billingType" type="checkbox">
+                <span class="slider round"></span>
+            </label>-->
+            <a id="annualBilling" class="disabled"  href="javascript:setAnnualPrice();" >Annual Billing - save $1000</a>
+          </div>
+        </div>
+        <div class="comparisonContainer">
+          <div class="comparison">
+
+            <table>
+              <thead>
+                <!--<tr>
+                  <th class="tl tl2"></th>
+                  
+                  <th colspan="5" class="qbo">
+                    Food Connex ERP Software for the Food Industry
+                  </th>
+                </tr> -->
+                <tr>
+                  <th class="tl optionHeader"></th>
+                  <th class="footerSlideHeader"></th>
+                  <th class="compare-heading">
+                    Starter
+                  </th>
+                  <th class="compare-heading">
+                    Business
+                  </th>
+                  <th class="compare-heading">
+                    Business Plus
+                  </th>
+                  <th class="compare-heading">
+                    Enterprise
+                  </th>
+                  
+                </tr>
+                <tr>
+                  <th class="optionHeader"><div class="perday"> <div class="smallText">Less than</div><br><div class="largeText"> $1.75</div><br><div class="smallText"> Per User Per Day</div></div></th>
+                  <th class="footerSlideColumn"></th>
+                  <th class="price-info">
+                    
+                    <div class="price-now"><span class="price">$15</span> /Month/User</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>1-3 users</span></div>
+                    
+                  </th>
+                  <th class="price-info">
+                    
+                    <div class="price-now"><span class="price">$30</span> /Month/User</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>up to 10 users</span></div>
+                    
+                  </th>
+                  <th class="price-info">
+                  
+                    <div class="price-now"><span class="price">$55</span> /Month/User</div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>up to 20 users</span></div>
+                  
+                  </th>
+                  <th class="price-info">
+                    
+                    <div class="price-call"><span>Call for Pricing</span></div>
+                    <div><a href="#" class="price-buy">Buy <span class="hide-mobile">Now</span></a></div>
+                    <div class="numberUsers"><span>unlimited users</span></div>
+                  
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="optionNameColumn"></td>
+                  <td colspan="5">Secure File Storage and Access</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Secure File Storage and Access</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('SecureStorage')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">eSignature Integration</td>
+                </tr>
+                <tr>
+                  <td class="optionName">eSignature Integration</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('FormsAndLabelPrinting')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Audit Logging</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Audit Logging</td>
+                  <td class="footerSlideIcon"><a href="javascript:drawerSlide('AuditLogging')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Full Text Search/OCR</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Full Text Search/OCR</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('ContentSearchPlatform')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Enterprise Security</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Enterprise Security</td>
+                  <td class="footerSlideColumn"></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Two-Factor Authentication</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Two-Factor Authentication</td>
+                  <td class="footerSlideColumn"></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">API Integration Access</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">API Integration Access</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('RestAPI')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Workflow</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Workflow</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('MobileOrderEntry')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">Add-on</span></td>
+                  <td><span class="tickgreen">Add-on</span></td>
+                  
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Barcode and OCR Scanning</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Barcode and OCR Scanning</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">Add-on</span></td>
+                  <td><span class="tickgreen">Add-on</span></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Premium Support</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Premium Support</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Desktop access</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">Desktop access</td>
+                  <td class="footerSlideColumn"></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                 
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Mobile access</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Mobile access</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">On Prem Installation</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">On Prem Installation</td>
+                  <td class="footerSlideColumn"><a href="javascript:drawerSlide('LotControl')"><i class="fas fa-angle-up fa-2x footerSlideButton"></i></a></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  <td><span class="tickgreen">✔</span></td>
+                  
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="5">Integration with 3rd Party Systems</td>
+                </tr>
+                <tr>
+                  <td class="optionName">Integration with 3rd Party Systems</td>
+                  <td class="footerSlideColumn"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr >
+                  <td>&nbsp;</td>
+                  <td colspan="5">API calls per month</td>
+                </tr>
+                <tr class="compare-row">
+                  <td class="optionName">API calls per month</td>
+                  <td class="footerSlideColumn"></td>
+                  <td>1,000</td>
+                  <td>10,000</td>
+                  <td>25,000</td>
+                  <td>Unlimited</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="footer">
+
+      <div id="copyright">
+          <p class="copyrightbottom">Copyright&copy;
+          <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script>
+          Multiprocess Computer, LLC. All Rights Reserved.</p>
+      </div>
+      <div id="copyrightLink">
+          <p> Multiprocess Computer, LLC, and its flagship solution DataView, are owned by CAI Software, LLC,<br>A leader in on-demand enterprise management systems. Visit <a href="http://www.caisoft.com" target="_blank" rel="noopener">caisoft.com</a> to learn more.</p>
+      </div>       
+    
+       
+      
+    </div>
+</div>
+<div id="footerSlideContainer">
+
+  <!-- Section for the POProcessing Option -->
+  <div id="POProcessing" class="hide">
+    <div class="footerSlideText">
+      <h3>Sales and Purchase Order Management</h3>
+      <p>Food Connex’s system lets you easily manage orders. The simple customizable screen displays historical order information, current inventory availability, and pricing information. Intuitive prompts help you quickly create orders and identify recommended items to increase sales and encourage retention.</p>
+      <a href="https://www.foodconnex.com/sales-and-purchase-order-management" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End POProcessing Option-->
+
+<!-- Section for the FormsAndLabelPrinting Option -->
+<div id="FormsAndLabelPrinting" class="hide">
+    <div class="footerSlideText">
+      <h3>Forms and Label Printing</h3>
+      <p>Food Connex’s system lets you easily create forms and labels for all products</p>
+      <!--<a href="https://www.foodconnex.com/sales-and-purchase-order-management" class="sliderButton">Read More</a>-->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End FormsAndLabelPrinting Option-->
+
+
+ 
+<!-- Section for the InventoryControl Option -->
+<div id="InventoryControl" class="hide">
+    <div class="footerSlideText">
+      <h3>Inventory Control & Reporting</h3>
+      <p>Food Connex displays information about available, allocated, and on order product for your staff. With Food Connex, when a customer asks if you stock a specific item, you have immediate access to that information so you no longer have to turn away a sale, or worse fail to deliver on a commitment. Each sales, purchase, and production process automatically updates the inventory information in real-time providing transparency for the entire warehouse.</p>
+      <a href="https://www.foodconnex.com/inventory-control" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/Inventory_control.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End InventoryControl Option-->
+
+<!-- Section for the Quickbooks Option -->
+<div id="Quickbooks" class="hide">
+    <div class="footerSlideText">
+      <h3>Accounting and QuickBooks Integration</h3>
+      <p>Food Connex integrates its order entry and inventory management system with QuickBooks general ledger, accounts receivables and payables. By utilizing an integrated solution for all your business management needs Food Connex eliminates the hassles of multiple stand-alone systems.</p>
+      <a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a>
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/qb.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End Quickbooks Option-->
+
+ <!-- Section for the LotControl Option -->
+<div id="LotControl" class="hide">
+    <div class="footerSlideText">
+      <h3>Traceability and Recall Reporting</h3>
+      <p>Protect your brand with automated traceability, instant recall reporting and lot tracking. Food Connex provides tools that enable you meet and exceed government and private safety and quality control guidelines while reducing the labor burden of recordkeeping.</p>
+      <!--<a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a> -->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/SalesandPOManagement.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End LotControl Option-->
+
+  <!-- Section for the MobileOrderEntry Option -->
+<div id="MobileOrderEntry" class="hide">
+    <div class="footerSlideText">
+      <h3>Mobile Order Entry</h3>
+      <p>Food Connex Mobile Order Entry allows access to your sales people and customers to place their own orders using a mobile site on a phone or tablet.</p>
+      <!--<a href="https://www.foodconnex.com/accounting-and-quickbooks-integration" class="sliderButton">Read More</a> -->
+    </div>
+    <div class="footerSlideImage">
+      <img src="img/orderentry.jpg" class="sliderImage">
+      <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+    </div>
+  </div>
+ <!-- End MobileOrderEntry Option-->
+
+  <!-- Section for the MobileFillAndShip Option -->
+  <div id="MobileFillAndShip" class="hide">
+      <div class="footerSlideText">
+        <h3>Packing Stations and Mobile Fill-n-Ship</h3>
+        <p>Packing stations enable users to quickly and accurately receive, process, and ship product. Barcode labeling and scanning eliminates errors by confirming product identification and automatically capturing weights for variable-weight products. Traceable serial numbers and production dates are also retained for quality control and recall reporting.</p>
+        <a href="https://www.foodconnex.com/packing-stations-and-mobile-fill-and-ship" class="sliderButton">Read More</a>
+      </div>
+      <div class="footerSlideImage">
+        <img src="img/Mobile_fillandship.jpg" class="sliderImage">
+        <i class="fas fa-times footerCloseButton" onclick="toggleSlider()"></i>
+      </div>
+    </div>
+   <!-- End MobileFillAndShip Option-->
+
+</div>
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1"></script>-->
+ 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script> 
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js\infinteRotator.js"></script>
+
+</body>
+
+</html>

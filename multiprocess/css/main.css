@@ -1,0 +1,1045 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  /*font-size: 1em;*/
+  line-height: 1.4;
+  font-size:16px;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* ========================================================================== */
+body {
+  font-family: 'Roboto';
+  font-size: 22px;
+  min-width: 1024px;
+  overflow: scroll;
+  height: 100%;
+  position: relative;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+#page-container {
+  
+  
+}
+
+.content{
+  display:flex;
+  flex-direction: column;
+  
+
+}
+/* Header Styles */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  background: #FFFFFF;
+  justify-content: space-between;
+  z-index:1000;
+  border-bottom: 3px solid #316598;
+}
+.logo {
+  width:302px;
+  height:69px;
+  padding-left: 50px;
+  padding-top: 10px;
+  align-self: center;
+}
+
+.contactInfo {
+  align-self: center;
+  padding-right: 50px;
+  font-size: .7em;
+}
+
+.contactUs {
+  background:#336699;
+  padding:10px 20px;
+  font-size:12px;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:3px;
+  text-transform:uppercase;
+  margin:5px 0 10px 0;
+}
+
+.phone {
+  color: #336699;
+}
+/* Message Styles */
+
+.messageHeader {
+  padding-top:150px;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.message {
+ 
+  font-size: 50px;
+  text-align: center;
+  color: #336699;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  align-self: center;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.messageText {
+  vertical-align: middle;
+  position: relative;
+  top: 20%;
+  transform: translateY(20%);
+}
+
+/* Monthly Switch Styles */
+
+.monthlySwitch {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.backgroundGallery_img {
+  width: 100%;
+  z-index: 1;
+}
+/*
+.monthlySwitch .enabled {
+
+  color: #336699;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4rem;
+
+}
+
+.monthlySwitch .disabled {
+  
+  color: #d3d1d1;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4rem;
+
+} */
+/*
+.monthlyBilling {
+  color: #336699;
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
+
+.annualBilling {
+  color: #888585;
+  padding-left: 20px;
+  font-size: 1.2rem;
+} */
+/*
+.monthlySwitch .switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+}
+
+.monthlySwitch .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.monthlySwitch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.monthlySwitch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.monthlySwitch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.monthlySwitch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.monthlySwitch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+*/
+
+/* Rounded sliders */
+/*
+.monthlySwitch .slider.round {
+  border-radius: 34px;
+}
+
+.monthlySwitch .slider.round:before {
+  border-radius: 50%;
+} */
+
+.comparisonContainer {
+  width: 100%;
+  background: #ffffff;
+}
+/* Comparison Table Styles */
+.comparison {
+  max-width:1440px;
+  margin:0 auto;
+  font:13px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align:center;
+  padding:10px;
+  
+ 
+}
+
+.comparison table {
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  border-bottom:1px solid #CCC;
+}
+
+.comparison td, .comparison th {
+  border-right:1px solid #CCC;
+  empty-cells: show;
+  padding:10px;
+
+}
+
+.optionHeader {
+  border-right: none !important;
+  display: flex;
+  justify-content:center;
+}
+
+.perday {
+  align-self:center;
+  color: #FFFFFF;
+  width: 130px;
+  height: 130px;
+  background: #00AB6F;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.smallText {
+  font-size: 12px;
+  line-height: 1;
+  -webkit-font-smoothing: subpixel-antialiased; 
+  letter-spacing: 0px;
+  font-family: Arial;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+.largeText {
+  font-size: 30px;
+  line-height: 1;  
+  -webkit-font-smoothing: subpixel-antialiased;  
+  letter-spacing: 0px;
+  font-family: Arial;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+@supports (-moz-appearance:none) {
+  .smallText {
+    font-size: 11px;
+  }
+  .largeText { 
+
+    line-height: 1.5; 
+  }
+
+}
+
+.numberUsers {
+  text-align: center;
+  font-size: .9em;
+  color: #336699;
+}
+.optionName {
+  border-left:1px solid #CCC;
+  border-right:none !important;
+}
+
+.footerSlideHeader {
+  border-right:1px solid #CCC;
+  border-left:none;
+  border-bottom: none !important;
+  width: 35px;
+  border-right:1px solid #CCC;
+}
+.footerSlideColumn {
+  width: 35px;
+  border-right:1px solid #CCC;
+  border-left:none !important;
+  margin: 5px;
+  
+}
+.compare-heading {
+  font-size:18px;
+  font-weight:bold !important;
+  border-bottom:0 !important;
+  border-top: solid 1px #ccc;
+  padding-top:10px !important;
+}
+
+.comparison tbody tr:nth-child(odd) {
+  display:none;
+}
+
+.comparison .compare-row {
+  background:#F5F5F5;
+}
+
+.comparison .tickblue {
+  color:#0078C1;
+}
+
+.comparison .tickgreen {
+  color:#009E2C;
+}
+
+.comparison th {
+  font-weight:normal;
+  padding:0;
+  border-bottom:1px solid #CCC;
+}
+
+.comparison tr td:first-child {
+  text-align:left;
+}
+  
+.comparison .qbse, .comparison .qbo, .comparison .tl {
+  color:#FFF;
+  padding:10px;
+  font-size:13px;
+  border-right:1px solid #CCC;
+  border-bottom:0;
+}
+
+.comparison .tl2 {
+  border-right:0;
+}
+
+.comparison .qbse {
+  background:#0078C1;
+  border-top-left-radius: 3px;
+  border-left:0px;
+}
+
+.comparison .qbo {
+  background:#009E2C;
+  border-top-right-radius: 3px;
+  border-right:0px;
+}
+
+.comparison .price-info {
+  padding:5px 15px 15px 15px;
+}
+
+.comparison .price-was {
+  color:#999;
+  text-decoration: line-through;
+}
+
+.comparison .price-now, .comparison .price-now span {
+  color: #336699;
+}
+
+.comparison .price-call {
+  color: #336699;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.comparison .price-now span {
+  font-size:32px;
+}
+
+.comparison .price-small {
+    font-size: 18px !important;
+    position: relative;
+    top: -11px;
+    left: 2px;
+}
+
+.comparison .price-buy {
+  background:#336699;
+  padding:10px 20px;
+  font-size:12px;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:3px;
+  text-transform:uppercase;
+  margin:5px 0 10px 0;
+}
+
+.comparison .price-try {
+  font-size:12px;
+}
+
+.comparison .price-try a {
+  color:#202020;
+}
+
+@media (max-width: 767px) {
+  .comparison td:first-child, .comparison th:first-child {
+    display: none;
+  }
+  .comparison tbody tr:nth-child(odd) {
+    display:table-row;
+    background:#F7F7F7;
+  }
+  .comparison .row {
+    background:#FFF;
+  }
+  .comparison td, .comparison th {
+    border:1px solid #CCC;
+  }
+  .price-info {
+  border-top:0 !important;
+  
+}
+  
+}
+
+@media (max-width: 639px) {
+  .comparison .price-buy {
+    padding:5px 10px;
+  }
+  .comparison td, .comparison th {
+    padding:10px 5px;
+  }
+  .comparison .hide-mobile {
+    display:none;
+  }
+  .comparison .price-now span {
+  font-size:16px;
+}
+
+.comparison .price-small {
+    font-size: 16px !important;
+    top: 0;
+    left: 0;
+}
+  .comparison .qbse, .comparison .qbo {
+    font-size:12px;
+    padding:10px 5px;
+  }
+  .comparison .price-buy {
+    margin-top:10px;
+  }
+  .compare-heading {
+  font-size:13px;
+}
+}
+
+.footerSlideButton {
+  color:#336699;
+ 
+}
+
+.footer {
+  position: fixed;
+  height:  2.5rem;  
+  width: 100%;
+  bottom: 0;
+}
+
+#monthlyBilling.enabled{
+  background:#336699;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  
+  margin:5px 0 10px 0;
+  width: 260px;
+}
+
+
+#monthlyBilling.disabled {
+  background:#b9b8b8;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  text-decoration: line-through;
+  margin:5px 0 10px 0;
+  width: 260px;
+}
+
+
+#annualBilling.enabled{
+  background:#336699;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  
+  margin:5px 0 10px 0;
+  width: 260px;
+}
+
+
+#annualBilling.disabled {
+  background:#b9b8b8;
+  padding:10px 20px;
+  font-size:1.2rem;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:0px;
+  text-decoration: line-through;
+  margin:5px 0 10px 0;
+  width: 260px;
+}
+
+
+/* Footer Slide Compontent */
+#footerSlideContainer {
+	position: fixed;
+	bottom:0;
+  width: 100%;
+  height:0px;
+  overflow: auto;
+  z-index: 1000;
+  overflow-x: hidden;
+  /*transition: 0.3s all;*/
+  left:0;
+}
+
+.slideup, .slidedown {
+  max-height: 0;            
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.8s ease-in-out;
+  -moz-transition: max-height 0.8s ease-in-out;
+  -o-transition: max-height 0.8s ease-in-out;
+  transition: max-height 0.8s ease-in-out;
+}
+
+#POProcessing {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#FormsAndLabelPrinting {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#InventoryControl {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+
+}
+
+#Quickbooks {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#LotControl {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#MobileOrderEntry {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+#MobileFillAndShip {
+
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+	width: 100%;
+	height: 0px;
+	background: #FFFFFF;
+	color: rgb(78, 77, 77);
+	font-size: 0.8em;
+	border: none;
+  font-family: DejaVuSansBook, Sans-Serif;
+  overflow: hidden;
+  position: fixed;
+}
+
+.hide {
+  display: none !important;
+}
+
+.footerSlideText {
+  float: left;
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2.2vh;
+}
+
+.footerCloseButton {
+
+  position: absolute;
+  color: black;
+  top: 16px;
+  right: 16px;
+  font-size: 1.3em;
+}
+
+.footerSlideImage {
+  float: left;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+
+}
+.sliderImage {
+
+  padding: 20px;
+  width: 19vw;
+  margin:10px;
+  object-fit: scale-down;
+  
+}
+
+.sliderButton {
+
+  background:#336699;
+  padding:10px 20px;
+  font-size:12px;
+  display:inline-block;
+  color:#FFF;
+  text-decoration:none;
+  border-radius:3px;
+  text-transform:uppercase;
+  margin:10px;
+  width: 150px;
+  align-self: center;
+}
+
+
+#pageOverlay {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,.7);
+  overflow: hidden;
+}
+
+/* Footer CSS */
+#footer {
+  height: 70px;
+  display: flex;
+  background-color: rgb(247, 239, 239);
+  
+  flex-direction: row;
+  width: 100%;
+  z-index: 10;
+}
+
+#copyright {
+  font-size: .8rem;
+  flex: 1;
+  
+  color: #336699;
+  text-align: center;
+}
+
+#copyrightLink {
+  font-size: .8rem;
+  flex: 1;
+  color: black;
+  text-align: center;
+
+}
+
+.backgroundGallery {
+  position:fixed;
+  z-index: -1;
+}
+
+.pricingPlan {
+  z-index:10;
+}
+
+
+#rotating-item-wrapper {
+  position: relative;
+  width: 980px;
+  height: 347px;
+}
+.rotating-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
