@@ -280,7 +280,8 @@ body {
 .content{
   display:flex;
   flex-direction: column;
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 20rem;    /* Footer height */
+
 }
 /* Header Styles */
 .navbar {
@@ -999,7 +1000,7 @@ body {
 
 .backgroundGallery {
   position:fixed;
-  z-index: 1;
+  z-index: -1;
 }
 
 .pricingPlan {
