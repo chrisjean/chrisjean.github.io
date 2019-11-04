@@ -1,7 +1,7 @@
 $("#annualBilling").off().on('click', setAnnualPrice());
 $("#monthlyBilling").off().on('click', setMonthlyPrice());
 
-var currentPrice = "monthly";
+var currentPrice = "annual";
 //setMonthlyPrice();
 
 var sliderState = false;
@@ -39,7 +39,7 @@ $(document).ready(function() {
    // $("#annualBilling").off().on('click', setAnnualPrice());
 
    
-   setMonthlyPrice();
+   setAnnualPrice();
   
 
     /*$("#billingType").change(function() {
