@@ -336,11 +336,11 @@ body {
 
 .message {
  
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   color: #336699;
   width: 800px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   align-self: center;
   border-radius: 3px;
@@ -362,6 +362,11 @@ body {
   padding: 20px;
   text-align: center;
 
+}
+
+.backgroundGallery_img {
+  width: 100%;
+  z-index: 1;
 }
 /*
 .monthlySwitch .enabled {
@@ -973,7 +978,7 @@ body {
   
   flex-direction: row;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 }
 
 #copyright {
@@ -999,4 +1004,17 @@ body {
 
 .pricingPlan {
   z-index:10;
+}
+
+
+#rotating-item-wrapper {
+  position: relative;
+  width: 980px;
+  height: 347px;
+}
+.rotating-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
