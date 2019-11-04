@@ -13,9 +13,9 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  /*font-size: 1em;*/
   line-height: 1.4;
-  
+  font-size:16px;
 }
 
 /*
@@ -510,17 +510,39 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 50%;
+  line-height: 1;
 }
 
 .smallText {
-  font-size: .70em;
+  font-size: 12px;
   line-height: 1;
+  -webkit-font-smoothing: subpixel-antialiased; 
+  letter-spacing: 0px;
+  font-family: Arial;
+  font-stretch: normal;
+  text-decoration: none;
 }
 
 
 .largeText {
-  font-size: 2em;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 1;  
+  -webkit-font-smoothing: subpixel-antialiased;  
+  letter-spacing: 0px;
+  font-family: Arial;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+@supports (-moz-appearance:none) {
+  .smallText {
+    font-size: 11px;
+  }
+  .largeText { 
+
+    line-height: 1.5; 
+  }
+
 }
 
 .numberUsers {
