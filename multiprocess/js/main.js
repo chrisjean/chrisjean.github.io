@@ -79,6 +79,7 @@ function setAnnualPrice() {
         var prices = $(".price") ;
 
         for(var i = 0; i<prices.length; i++) {
+            var value = prices[i].textContent;
 
             newValue = Math.round(parseFloat(value.substring(1)) / 10);
 
