@@ -1,7 +1,7 @@
 $("#annualBilling").off().on('click', setAnnualPrice());
 $("#monthlyBilling").off().on('click', setMonthlyPrice());
 
-var currentPrice = "monthly";
+var currentPrice = "annual";
 //setMonthlyPrice();
 
 var sliderState = false;
@@ -39,7 +39,7 @@ $(document).ready(function() {
    // $("#annualBilling").off().on('click', setAnnualPrice());
 
    
-   setMonthlyPrice();
+   setAnnualPrice();
   
 
     /*$("#billingType").change(function() {
@@ -81,7 +81,9 @@ function setAnnualPrice() {
         for(var i = 0; i<prices.length; i++) {
             var value = prices[i].textContent;
 
-            var outputValue = parseFloat(value.substring(1)) - parseFloat(80);
+            newValue = Math.round(parseFloat(value.substring(1)) / 10);
+
+            var outputValue = parseFloat(value.substring(1)) - parseFloat(newValue);
 
             prices[i].textContent = '$' + outputValue;
 
@@ -104,8 +106,10 @@ function setMonthlyPrice() {
 
         for(var i = 0; i<prices.length; i++) {
             var value = prices[i].textContent;
+            
+            newValue = Math.round(parseFloat(value.substring(1)) / 10);
 
-            var outputValue = parseFloat(value.substring(1)) + parseFloat(80);
+            var outputValue = parseFloat(value.substring(1)) + parseFloat(newValue);
 
             prices[i].textContent = '$' + outputValue;
 
