@@ -582,6 +582,7 @@ body {
   text-align: center;
   font-size: .9em;
   color: #336699;
+  margin-bottom: 10px;
 }
 .optionName {
   border-left:1px solid #CCC;
