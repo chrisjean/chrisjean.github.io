@@ -471,7 +471,7 @@ body {
   position: -webkit-sticky;
   top: 77px;
   /*background: #ffffff;*/
-  border: 1px solid #CCC !important;
+  /*border: 1px solid #CCC !important;*/
 }
 
 .tableHeader {
@@ -516,15 +516,15 @@ body {
 }
 
 #optionHeader {
-  position: relative;
+  /*position: relative;*/
   border-right: none !important;
   /*border-left: 1px solid #CCC !important;
   border-top: 1px solid #CCC !important;*/
   border-bottom: 1px solid #CCC !important;
   
-  justify-content:center;
+  
   background: #ffffff;
-  height: 100%;
+ 
   text-align: center;
 }
 
