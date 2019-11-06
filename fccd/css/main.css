@@ -468,6 +468,7 @@ body {
 
 .stickyHeader {
   position: sticky;
+  position: -webkit-sticky;
   top: 77px;
   /*background: #ffffff;*/
   border: 1px solid #CCC !important;
