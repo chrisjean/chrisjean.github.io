@@ -663,7 +663,7 @@ body {
 
 .comparison .price-info {
   /*padding:5px 15px 15px 15px;*/
-  border-bottom:1px solid #CCC;
+  border-right:1px solid #CCC !important;
 }
 
 .comparison .price-was {
