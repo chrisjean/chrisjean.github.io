@@ -469,7 +469,8 @@ body {
 .stickyHeader {
   position: sticky;
   top: 77px;
-  background: #ffffff;
+  /*background: #ffffff;*/
+  border: 1px solid #CCC !important;
 }
 
 .tableHeader {
@@ -480,7 +481,7 @@ body {
   
 }
 .borderTop {
-  border-top: 1px solid #CCC !important;
+  /*border-top: 1px solid #CCC !important;*/
 }
 .comparisonContainer {
   width: 100%;
@@ -500,7 +501,7 @@ body {
 
 .comparison table {
   width:100%;
-  border-collapse: collapse;
+  border-collapse: unset;
   border-spacing: 0;
   table-layout: fixed;
   border-bottom:1px solid #CCC;
@@ -513,19 +514,30 @@ body {
 
 }
 
-.optionHeader {
+#optionHeader {
+  position: relative;
   border-right: none !important;
-  display: flex;
+  /*border-left: 1px solid #CCC !important;
+  border-top: 1px solid #CCC !important;*/
+  border-bottom: 1px solid #CCC !important;
+  
   justify-content:center;
+  background: #ffffff;
+  height: 100%;
+  text-align: center;
 }
 
 .perday {
+  padding: auto;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px; 
   align-self:center;
   color: #FFFFFF;
   width: 130px;
   height: 130px;
   background: #00AB6F;
-  margin: 10px 10px 10px 10px;
+ 
   text-align: center;
   flex-direction: column;
   display: flex;
@@ -577,17 +589,20 @@ body {
 }
 
 .footerSlideHeader {
-  border-right:1px solid #CCC;
+  border-right:1px solid #CCC !important;
   border-left:none;
-  border-bottom: none !important;
+  border-bottom: 1px solid #CCC !important;
+  /*border-top: 1px solid #CCC !important; */
   width: 35px;
-  border-right:1px solid #CCC;
+  
+  background: #ffffff;
 }
 .footerSlideColumn {
   width: 35px;
   border-right:1px solid #CCC;
   border-left:none !important;
   margin: 5px;
+  
   
 }
 .compare-heading {
@@ -606,6 +621,8 @@ body {
 .levelName {
 
   font-size:18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   position: relative;
   font-weight:bold !important;
   border-bottom:0 !important;
@@ -661,23 +678,25 @@ body {
   border-right:0px;
 }
 
-.comparison .price-info {
+.price-info {
   /*padding:5px 15px 15px 15px;*/
-  border-right:1px solid #CCC !important;
+  border-right: 1px solid #CCC !important;
+  border-top: 1px solid #CCC !important;
+  border-bottom: 1px solid #CCC !important;
+  background: #ffffff;
 }
 
-.comparison .price-was {
-  color:#999;
-  text-decoration: line-through;
-}
+
 
 .comparison .price-now, .comparison .price-now span {
   color: #336699;
+  padding-top:5px;
+  padding-bottom: 5px;
 }
 
 .comparison .price-call {
   color: #336699;
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 .comparison .price-now span {
