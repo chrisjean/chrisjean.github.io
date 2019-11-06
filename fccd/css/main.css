@@ -351,7 +351,7 @@ body {
 .messageText {
   vertical-align: middle;
   position: relative;
-  top: 20%;
+  /*top: 20%;*/
   transform: translateY(20%);
 }
 
@@ -462,9 +462,30 @@ body {
   border-radius: 50%;
 } */
 
+.comparisonTable {
+  position: relative;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 77px;
+  background: #ffffff;
+}
+
+.tableHeader {
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid #CCC !important;
+  
+  
+}
+.borderTop {
+  border-top: 1px solid #CCC !important;
+}
 .comparisonContainer {
   width: 100%;
   background: #ffffff;
+  /*top: 100px;*/
 }
 /* Comparison Table Styles */
 .comparison {
@@ -570,11 +591,24 @@ body {
   
 }
 .compare-heading {
+  
   font-size:18px;
+  position: relative;
+  font-weight:bold !important;
+  border-bottom:solid 1px #ccc !important;
+  border-top: solid 1px #ccc;
+ 
+  border-right: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  background: #ffffff;
+}
+
+.levelName {
+
+  font-size:18px;
+  position: relative;
   font-weight:bold !important;
   border-bottom:0 !important;
-  border-top: solid 1px #ccc;
-  padding-top:10px !important;
 }
 
 .comparison tbody tr:nth-child(odd) {
@@ -596,7 +630,7 @@ body {
 .comparison th {
   font-weight:normal;
   padding:0;
-  border-bottom:1px solid #CCC;
+  
 }
 
 .comparison tr td:first-child {
@@ -628,7 +662,8 @@ body {
 }
 
 .comparison .price-info {
-  padding:5px 15px 15px 15px;
+  /*padding:5px 15px 15px 15px;*/
+  border-bottom:1px solid #CCC;
 }
 
 .comparison .price-was {
