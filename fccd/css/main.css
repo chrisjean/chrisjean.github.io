@@ -544,6 +544,7 @@ body {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  
   border-radius: 50%;
   line-height: 1;
 }
@@ -585,6 +586,8 @@ body {
   font-size: .9em;
   color: #336699;
   margin-bottom: 10px;
+  
+  grid-row: 4;
 }
 .optionName {
   border-left:1px solid #CCC;
@@ -623,10 +626,11 @@ body {
 
 .levelName {
 
+  grid-row: 1;
   font-size:18px;
   margin-top: 15px;
-  margin-bottom: 15px;
-  position: relative;
+  margin-bottom: 10px;
+  /*position: relative;*/
   font-weight:bold !important;
   border-bottom:0 !important;
 }
@@ -681,7 +685,16 @@ body {
   border-right:0px;
 }
 
+.levelHeader {
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px 60px 50px 20px;
+  
+}
+
 .price-info {
+  
   /*padding:5px 15px 15px 15px;*/
   border-right: 1px solid #CCC !important;
   border-top: 1px solid #CCC !important;
@@ -698,9 +711,12 @@ body {
 }
 
 .comparison .price-call {
+  grid-row: 2;
   color: #336699;
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 1.7vw;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  flex-basis: 25%;
 }
 .comparison .price-now span {
   font-size:32px;
@@ -713,7 +729,11 @@ body {
     left: 2px;
 }
 
+.comparison .buyNow {
+  grid-row: 3;
+}
 .comparison .price-buy {
+  
   background:#336699;
   padding:10px 20px;
   font-size:12px;
@@ -723,6 +743,7 @@ body {
   border-radius:3px;
   text-transform:uppercase;
   margin:5px 0 10px 0;
+  flex-basis: 25%;
 }
 
 .comparison .price-try {
