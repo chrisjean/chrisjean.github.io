@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573352768104,
+  "timestamp": 1573357912168,
   "index": "/mobileorderentry/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/mobileorderentry/favicon.ico",
         "/mobileorderentry/index.html",
-        "/mobileorderentry/main-es2015.2a74d9dd6eec37cd6c98.js",
-        "/mobileorderentry/main-es5.2a74d9dd6eec37cd6c98.js",
+        "/mobileorderentry/main-es2015.7cd961b7e25db3822af3.js",
+        "/mobileorderentry/main-es5.7cd961b7e25db3822af3.js",
         "/mobileorderentry/manifest.webmanifest",
         "/mobileorderentry/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "/mobileorderentry/polyfills-es5.ef4b1e1fc703b3ff76e3.js",
@@ -33,7 +33,14 @@
         "/mobileorderentry/assets/icons/icon-384x384.png",
         "/mobileorderentry/assets/icons/icon-512x512.png",
         "/mobileorderentry/assets/icons/icon-72x72.png",
-        "/mobileorderentry/assets/icons/icon-96x96.png"
+        "/mobileorderentry/assets/icons/icon-96x96.png",
+        "/mobileorderentry/assets/splash/launch-1125x2436.jpg",
+        "/mobileorderentry/assets/splash/launch-1242x2148.jpg",
+        "/mobileorderentry/assets/splash/launch-1536x2048.jpg",
+        "/mobileorderentry/assets/splash/launch-1668x2224.jpg",
+        "/mobileorderentry/assets/splash/launch-2048x2732.jpg",
+        "/mobileorderentry/assets/splash/launch-640-1136.jpg",
+        "/mobileorderentry/assets/splash/launch-750x1294.jpg"
       ],
       "patterns": []
     }
@@ -48,10 +55,17 @@
     "/mobileorderentry/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/mobileorderentry/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/mobileorderentry/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/mobileorderentry/assets/splash/launch-1125x2436.jpg": "a7c82675b5c05c0bfc01856a2d6e8c5c4ad7d826",
+    "/mobileorderentry/assets/splash/launch-1242x2148.jpg": "054906f9c1016e2e6c6346d3ed9f08f46774717b",
+    "/mobileorderentry/assets/splash/launch-1536x2048.jpg": "77d5c7bf1db7a174fbedc26443072df7d9f31fb6",
+    "/mobileorderentry/assets/splash/launch-1668x2224.jpg": "98fa4cf6095c758c67c5f9af5297e964e034552d",
+    "/mobileorderentry/assets/splash/launch-2048x2732.jpg": "8bc9e1a00d693db76ff94a238214d5f0adec1b0d",
+    "/mobileorderentry/assets/splash/launch-640-1136.jpg": "09f2905d92d0899d7b43271d5258c5ee5b7d3996",
+    "/mobileorderentry/assets/splash/launch-750x1294.jpg": "5dc55f12c286f6f98c69bdf20826b5d1d3a7faea",
     "/mobileorderentry/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/mobileorderentry/index.html": "aaa456d84ba63aea9298c7ef82793f010c4439a1",
-    "/mobileorderentry/main-es2015.2a74d9dd6eec37cd6c98.js": "668370b0fa460d4b53103fd3ca4d9ae59e19b85b",
-    "/mobileorderentry/main-es5.2a74d9dd6eec37cd6c98.js": "02d71c8d537390e727c9e70e78c402ac495c670c",
+    "/mobileorderentry/index.html": "ff4fc2798a96138319b0dd11761d6a4971dfde52",
+    "/mobileorderentry/main-es2015.7cd961b7e25db3822af3.js": "d2a4a1f488b4b1de786a0219c1303b6e5ca13cae",
+    "/mobileorderentry/main-es5.7cd961b7e25db3822af3.js": "03a0acef5e29e0f526e053e4c6511cf16843080d",
     "/mobileorderentry/manifest.webmanifest": "bbcae1474c5480209886ab74d281a51d63218907",
     "/mobileorderentry/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/mobileorderentry/polyfills-es5.ef4b1e1fc703b3ff76e3.js": "45c51483238468881240579c3fdecd19144cff17",
