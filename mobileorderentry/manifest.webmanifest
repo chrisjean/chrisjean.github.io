@@ -1,6 +1,6 @@
 {
-  "name": "AngularMobileOrderEntry",
-  "short_name": "AngularMobileOrderEntry",
+  "name": "MobileOrderEntry",
+  "short_name": "Order Entry",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
