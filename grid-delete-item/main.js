@@ -89,10 +89,11 @@ class AppComponent {
     }
     ngAfterViewInit() {
         var _a;
-        (_a = this.dxColumnChooser) === null || _a === void 0 ? void 0 : _a.instance.options({
+        (_a = this.dxColumnChooser) === null || _a === void 0 ? void 0 : _a.instance.option({
             useNative: false,
             showScrollbar: 'always',
         });
+        console.log('Updated scroll bar options');
     }
     createDescriptionDisplayString(item) {
         return item.absenceName;
