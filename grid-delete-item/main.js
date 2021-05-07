@@ -62,7 +62,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AppComponent {
-    // widget?: any;
     constructor() {
         this.title = 'grid-delete-item';
         this.absenceTypes = [
@@ -147,6 +146,7 @@ class AppComponent {
             return 'linuxOS';
         }
         else {
+            console.log('Unable to determine OS');
             return 'unknown';
         }
     }
@@ -192,9 +192,9 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineCompo
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.dxGridComponent = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.dxColumnChooser = _t.first);
-    } }, decls: 23, vars: 28, consts: [[1, "gridContainer"], [1, "absenceGrid"], [3, "dataSource", "repaintChangesOnly", "showBorders", "showRowLines", "twoWayBindingEnabled", "wordWrapEnabled"], ["mode", "draganddrop", 3, "enabled"], ["mode", "standard"], ["mode", "cell", 3, "allowUpdating", "allowDeleting", "allowAdding", "useIcons", "confirmDelete"], ["dataField", "absenceTypeID", "caption", "Absence Type", 3, "width"], ["valueExpr", "absenceTypeID", 3, "dataSource", "displayExpr"], ["dataField", "time", "caption", "Time", "alignment", "left", 3, "width", "dataType", "showEditorAlways"], ["dataField", "note", "caption", "Note"], ["dxTextArea", ""], ["dataField", "hiddenColumn1", "caption", "hiddenColumn1", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn2", "caption", "hiddenColumn2", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn3", "caption", "hiddenColumn3", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn4", "caption", "hiddenColumn4", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn5", "caption", "hiddenColumn5", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn6", "caption", "hiddenColumn6", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn7", "caption", "hiddenColumn7", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn8", "caption", "hiddenColumn8", "dataType", "string", 3, "visible"], ["type", "buttons", 3, "width"], ["name", "delete", 3, "onClick"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 23, vars: 29, consts: [[1, "gridContainer"], [1, "absenceGrid"], [3, "dataSource", "repaintChangesOnly", "showBorders", "showRowLines", "twoWayBindingEnabled", "wordWrapEnabled", "allowColumnReordering"], ["mode", "draganddrop", 3, "enabled"], ["mode", "standard"], ["mode", "cell", 3, "allowUpdating", "allowDeleting", "allowAdding", "useIcons", "confirmDelete"], ["dataField", "absenceTypeID", "caption", "Absence Type", 3, "width"], ["valueExpr", "absenceTypeID", 3, "dataSource", "displayExpr"], ["dataField", "time", "caption", "Time", "alignment", "left", 3, "width", "dataType", "showEditorAlways"], ["dataField", "note", "caption", "Note"], ["dxTextArea", ""], ["dataField", "hiddenColumn1", "caption", "hiddenColumn1", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn2", "caption", "hiddenColumn2", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn3", "caption", "hiddenColumn3", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn4", "caption", "hiddenColumn4", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn5", "caption", "hiddenColumn5", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn6", "caption", "hiddenColumn6", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn7", "caption", "hiddenColumn7", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn8", "caption", "hiddenColumn8", "dataType", "string", 3, "visible"], ["type", "buttons", 3, "width"], ["name", "delete", 3, "onClick"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Grid Test v1.0.0.2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Grid Test v1.0.0.3");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 1);
@@ -223,7 +223,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("dataSource", ctx.absenceDataSource)("repaintChangesOnly", true)("showBorders", true)("showRowLines", true)("twoWayBindingEnabled", false)("wordWrapEnabled", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("dataSource", ctx.absenceDataSource)("repaintChangesOnly", true)("showBorders", true)("showRowLines", true)("twoWayBindingEnabled", false)("wordWrapEnabled", true)("allowColumnReordering", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("enabled", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
@@ -254,7 +254,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("width", 50);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("onClick", ctx.onDelete.bind(ctx));
-    } }, directives: [devextreme_angular_ui_data_grid__WEBPACK_IMPORTED_MODULE_4__["DxDataGridComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoColumnChooserComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoScrollingComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoEditingComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxiColumnComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoLookupComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxiButtonComponent"]], styles: [".dx-scrollbar-vertical .dx-scrollable-scroll {\n  width: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtBQUNGIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjo6bmctZGVlcCAuZHgtc2Nyb2xsYmFyLXZlcnRpY2FsIC5keC1zY3JvbGxhYmxlLXNjcm9sbCB7XHJcbiAgd2lkdGg6IDIwcHg7XHJcbn1cclxuIl19 */"] });
+    } }, directives: [devextreme_angular_ui_data_grid__WEBPACK_IMPORTED_MODULE_4__["DxDataGridComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoColumnChooserComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoScrollingComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoEditingComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxiColumnComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxoLookupComponent"], devextreme_angular_ui_nested__WEBPACK_IMPORTED_MODULE_2__["DxiButtonComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
