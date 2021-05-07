@@ -83,8 +83,14 @@ class AppComponent {
     }
     ngOnInit() { }
     ngAfterViewInit() {
+        console.log('Navigator userAgent: ' + navigator.userAgent);
+        if ('onTouchEnd' in document) {
+            console.log('onTouchEnd found');
+        }
         if (navigator.userAgent.includes('Mac') && 'onTouchEnd' in document) {
+            console.log('Detected IOS');
             if (this.dxColumnChooser) {
+                console.log('Changing column chooser mode to select');
                 this.dxColumnChooser.mode = 'select';
             }
         }
