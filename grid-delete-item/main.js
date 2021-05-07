@@ -87,9 +87,9 @@ class AppComponent {
         if ('onTouchEnd' in document) {
             console.log('onTouchEnd found');
         }
-        if (navigator.userAgent.includes('Mac') &&
-            navigator.userAgent.includes('iPad')) {
-            console.log('Detected IOS');
+        const userOS = this.detectOS();
+        if (userOS === 'iOS' || userOS === 'androidOS') {
+            console.log('Detected Mobile Platform');
             if (this.dxColumnChooser) {
                 console.log('Changing column chooser mode to select');
                 this.dxColumnChooser.mode = 'select';
@@ -118,6 +118,37 @@ class AppComponent {
     
         console.log('Widget option set');
         */
+    }
+    detectOS() {
+        const userAgent = window.navigator.userAgent;
+        const platform = window.navigator.platform;
+        const macOsPlatforms = [
+            'Macintosh',
+            'MacIntel',
+            'MacPPC',
+            'Mac68K',
+            'darwin',
+        ];
+        const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+        const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
+        if (macOsPlatforms.indexOf(platform) !== -1) {
+            return 'macOS';
+        }
+        else if (iosPlatforms.indexOf(platform) !== -1) {
+            return 'iOS';
+        }
+        else if (windowsPlatforms.indexOf(platform) !== -1) {
+            return 'windowsOS';
+        }
+        else if (/Android/.test(userAgent)) {
+            return 'androidOS';
+        }
+        else if (/Linux/.test(userAgent)) {
+            return 'linuxOS';
+        }
+        else {
+            return 'unknown';
+        }
     }
     createDescriptionDisplayString(item) {
         return item.absenceName;
@@ -163,7 +194,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.dxColumnChooser = _t.first);
     } }, decls: 23, vars: 28, consts: [[1, "gridContainer"], [1, "absenceGrid"], [3, "dataSource", "repaintChangesOnly", "showBorders", "showRowLines", "twoWayBindingEnabled", "wordWrapEnabled"], ["mode", "draganddrop", 3, "enabled"], ["mode", "standard"], ["mode", "cell", 3, "allowUpdating", "allowDeleting", "allowAdding", "useIcons", "confirmDelete"], ["dataField", "absenceTypeID", "caption", "Absence Type", 3, "width"], ["valueExpr", "absenceTypeID", 3, "dataSource", "displayExpr"], ["dataField", "time", "caption", "Time", "alignment", "left", 3, "width", "dataType", "showEditorAlways"], ["dataField", "note", "caption", "Note"], ["dxTextArea", ""], ["dataField", "hiddenColumn1", "caption", "hiddenColumn1", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn2", "caption", "hiddenColumn2", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn3", "caption", "hiddenColumn3", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn4", "caption", "hiddenColumn4", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn5", "caption", "hiddenColumn5", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn6", "caption", "hiddenColumn6", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn7", "caption", "hiddenColumn7", "dataType", "string", 3, "visible"], ["dataField", "hiddenColumn8", "caption", "hiddenColumn8", "dataType", "string", 3, "visible"], ["type", "buttons", 3, "width"], ["name", "delete", 3, "onClick"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Grid Test v1.0.0.1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Grid Test v1.0.0.2");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 1);
