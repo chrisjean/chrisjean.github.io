@@ -74,19 +74,16 @@ class AppComponent {
         this.title = 'BarcodeReader';
         this.barcodeValue = '';
         this.isError = false;
-        this.quaggasConfig = {};
+        //https://www.soundjay.com/buttons/beep-01a.mp3
+        //https://www.soundjay.com/buttons/button-3.mp3
+        this.audio = new Audio('https://www.soundjay.com/buttons/button-3.mp3');
     }
     ngOnInit() {
-        //this.service.start(this.quaggasConfig, 0.1);
     }
     ngAfterViewInit() {
     }
-    onValueChanges(result) {
-        console.log(result);
-        this.barcodeValue = result.codeResult.code;
-    }
-    onStarted(started) {
-        console.log(started);
+    playSound() {
+        this.audio.play();
     }
     onError(error) {
         console.error(error);
@@ -104,7 +101,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "ngx-barcode-scanner", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("valueChange", function AppComponent_Template_ngx_barcode_scanner_valueChange_2_listener($event) { return ctx.barcodeValue = $event; })("exception", function AppComponent_Template_ngx_barcode_scanner_exception_2_listener($event) { return ctx.onError($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("valueChange", function AppComponent_Template_ngx_barcode_scanner_valueChange_2_listener($event) { return ctx.barcodeValue = $event; })("exception", function AppComponent_Template_ngx_barcode_scanner_exception_2_listener($event) { return ctx.onError($event); })("valueChange", function AppComponent_Template_ngx_barcode_scanner_valueChange_2_listener() { return ctx.playSound(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "button", 3);
