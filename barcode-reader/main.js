@@ -76,7 +76,8 @@ class AppComponent {
         this.isError = false;
         //https://www.soundjay.com/buttons/beep-01a.mp3
         //https://www.soundjay.com/buttons/button-3.mp3
-        this.audio = new Audio('https://www.soundjay.com/buttons/button-3.mp3');
+        //https://www.soundjay.com/buttons/button-42.mp3
+        this.audio = new Audio('https://www.soundjay.com/buttons/button-42.mp3');
     }
     ngOnInit() {
     }
@@ -112,7 +113,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_6_listener() { return ctx.barcodeValue = ""; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_6_listener() { return ctx.clear(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Clear");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
